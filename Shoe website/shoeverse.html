@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeVerse - Premium Footwear E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shoeverse.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ShoeVerse</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#men">Men</a></li>
+                        <li><a class="dropdown-item" href="#women">Women</a></li>
+                        <li><a class="dropdown-item" href="#sports">Sports</a></li>
+                        <li><a class="dropdown-item" href="#casual">Casual</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cart" onclick="toggleCart()">Cart <i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="toggleDarkMode()">Dark Mode</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Step into Style</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Discover the latest collection of premium footwear</p>
+            <a href="#products" class="btn btn-light" data-aos="fade-up" data-aos-delay="400">Shop Now</a>
+            <a href="#products" class="btn btn-outline-light" data-aos="fade-up" data-aos-delay="600">Explore</a>
+        </div>
+        <div class="hero-shoe" data-aos="zoom-in" data-aos-delay="800"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Our Products</h2>
+            <div class="filters" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="casual">Casual</button>
+                <button class="filter-btn" data-filter="formal">Formal</button>
+                <button class="filter-btn" data-filter="slippers">Slippers</button>
+                <button class="filter-btn" data-filter="comfort">Comfort</button>
+            </div>
+
+            <!-- Men's Shoes -->
+            <div class="category-section" id="men">
+                <h3 class="text-center mt-5 mb-4" data-aos="fade-up">Men's Shoes</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="men-casual" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=250&fit=crop" alt="Men's Casual Sneaker" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Men's Casual Sneaker</h5>
+                            <p class="product-price">$99.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="men-formal" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=300&h=250&fit=crop" alt="Men's Formal Oxford" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Men's Formal Oxford</h5>
+                            <p class="product-price">$149.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="men-sports" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=250&fit=crop" alt="Men's Running Shoe" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Men's Running Shoe</h5>
+                            <p class="product-price">$129.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="men-casual" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=250&fit=crop" alt="Men's Boots" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Men's Leather Boots</h5>
+                            <p class="product-price">$179.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Shoes -->
+            <div class="category-section" id="women">
+                <h3 class="text-center mt-5 mb-4" data-aos="fade-up">Women's Shoes</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="women-casual" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=250&fit=crop" alt="Women's High Heel" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Women's High Heel</h5>
+                            <p class="product-price">$159.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="women-casual" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=250&fit=crop" alt="Women's Sneaker" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Women's Fashion Sneaker</h5>
+                            <p class="product-price">$109.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="women-formal" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=300&h=250&fit=crop" alt="Women's Formal Pump" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Women's Formal Pump</h5>
+                            <p class="product-price">$139.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="women-sports" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=250&fit=crop" alt="Women's Sports Shoe" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Women's Sports Shoe</h5>
+                            <p class="product-price">$119.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slippers & Comfort Footwear -->
+            <div class="category-section" id="comfort">
+                <h3 class="text-center mt-5 mb-4" data-aos="fade-up">Slippers & Comfort Footwear</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="slippers" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=300&h=250&fit=crop" alt="Cozy Slippers" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Cozy Fleece Slippers</h5>
+                            <p class="product-price">$39.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="comfort" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=250&fit=crop" alt="Crocs Clogs" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Classic Crocs Clogs</h5>
+                            <p class="product-price">$49.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="comfort" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=250&fit=crop" alt="Comfort Sliders" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Comfort EVA Sliders</h5>
+                            <p class="product-price">$29.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="comfort" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=300&h=250&fit=crop" alt="Memory Foam Slippers" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Memory Foam Slippers</h5>
+                            <p class="product-price">$59.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports Shoes -->
+            <div class="category-section" id="sports">
+                <h3 class="text-center mt-5 mb-4" data-aos="fade-up">Sports & Athletic Shoes</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="sports" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=250&fit=crop" alt="Running Shoes" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Performance Running Shoes</h5>
+                            <p class="product-price">$169.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sports" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=250&fit=crop" alt="Basketball Shoes" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Basketball Shoes</h5>
+                            <p class="product-price">$189.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sports" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=250&fit=crop" alt="Training Shoes" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Cross-Training Shoes</h5>
+                            <p class="product-price">$149.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sports" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=250&fit=crop" alt="Tennis Shoes" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Tennis Shoes</h5>
+                            <p class="product-price">$139.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casual Shoes -->
+            <div class="category-section" id="casual">
+                <h3 class="text-center mt-5 mb-4" data-aos="fade-up">Casual Shoes</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="casual" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=250&fit=crop" alt="Canvas Sneakers" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Canvas Sneakers</h5>
+                            <p class="product-price">$79.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="casual" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=250&fit=crop" alt="Loafers" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Penny Loafers</h5>
+                            <p class="product-price">$89.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="casual" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=250&fit=crop" alt="Espadrilles" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Summer Espadrilles</h5>
+                            <p class="product-price">$69.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="casual" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=300&h=250&fit=crop" alt="Boat Shoes" class="product-img">
+                        <div class="product-info">
+                            <h5 class="product-title">Boat Shoes</h5>
+                            <p class="product-price">$99.99</p>
+                            <button class="quick-view" onclick="quickView(this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://via.placeholder.com/500x500?text=Shoe" class="d-block w-100" alt="Shoe">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://via.placeholder.com/500x500?text=Shoe2" class="d-block w-100" alt="Shoe">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductTitle">Product Name</h3>
+                            <p id="modalProductPrice">$99.99</p>
+                            <div class="mb-3">
+                                <label>Size:</label>
+                                <select class="form-select" id="sizeSelect">
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label>Color:</label>
+                                <div class="d-flex">
+                                    <div class="color-option" style="background: black; width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;" onclick="selectColor(this)"></div>
+                                    <div class="color-option" style="background: white; width: 30px; height: 30px; border-radius: 50%; margin-right: 10px; border: 1px solid #ccc;" onclick="selectColor(this)"></div>
+                                    <div class="color-option" style="background: red; width: 30px; height: 30px; border-radius: 50%;" onclick="selectColor(this)"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+        <h3>Your Cart</h3>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+        <button class="btn btn-success w-100 mt-3">Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>ShoeVerse</h5>
+                    <p>Your premier destination for stylish footwear.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter email" id="newsletterEmail">
+                        <button class="btn" onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="shoeverse.js"></script>
+</body>
+</html>
