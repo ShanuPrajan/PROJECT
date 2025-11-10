@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Registration Form</title>
+  <style>
+    /* Basic Styling */
+    body {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef3ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit {
+      background-color: #4a80ff;
+      color: white;
+    }
+
+    .reset {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Work Registration Form</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone</label>
+      <input type="tel" placeholder="+91**********" required>
+
+      <label>Position Applying For</label>
+      <input type="text" placeholder="Enter job title" required>
+
+      <label>Department</label>
+      <select required>
+        <option value="">Select department</option>
+        <option>HR</option>
+        <option>Finance</option>
+        <option>Marketing</option>
+        <option>Operations</option>
+        <option>IT Support</option>
+      </select>
+
+      <label>Experience (in years)</label>
+      <input type="number" placeholder="Enter years of experience" required>
+
+      <label>Key Skills</label>
+      <textarea placeholder="List your skills" required></textarea>
+
+      <label>Availability Date</label>
+      <input type="date" required>
+
+      <div class="btns">
+        <button type="reset" class="reset">Clear</button>
+        <button type="submit" class="submit">Register</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
